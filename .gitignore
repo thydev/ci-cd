@@ -1,4 +1,4 @@
 bin/
-obj
+obj/
 .vscode
 .DS_Store
