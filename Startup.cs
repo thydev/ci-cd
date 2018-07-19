@@ -26,8 +26,8 @@ namespace ci
     {
       services.Configure<CookiePolicyOptions>(options =>
       {
-              // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-              options.CheckConsentNeeded = context => true;
+        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+        options.CheckConsentNeeded = context => true;
         options.MinimumSameSitePolicy = SameSiteMode.None;
       });
 
@@ -45,12 +45,12 @@ namespace ci
       else
       {
         app.UseExceptionHandler("/Home/Error");
-        app.UseHsts();
+        // app.UseHsts();
       }
 
-      app.UseHttpsRedirection();
+      //   app.UseHttpsRedirection();
       app.UseStaticFiles();
-      app.UseCookiePolicy();
+      //   app.UseCookiePolicy();
 
       app.UseMvc();
     }
